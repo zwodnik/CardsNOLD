@@ -6,8 +6,36 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+	<Page.Resources>
+		<DataTemplate x:Key="CardsListViewTemplate">
+			<StackPanel>
+				<TextBlock TextWrapping="Wrap" Text="{Binding NumberColor}"/>
+			</StackPanel>
+		</DataTemplate>
+	</Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="2*" />
+        </Grid.RowDefinitions>
+        
+        <StackPanel Margin="0" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <Button Content="Karty" />
+        </StackPanel>
+        
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Ok" />
+            <Button Content="Zgarnij" />
+        </StackPanel>
+        
+        <StackPanel Grid.Row="2">
+        	<ListView x:Name="CardsListView" Margin="100,50" ItemTemplate="{StaticResource CardsListViewTemplate}"/>
+        </StackPanel>
+        
     </Grid>
+    
 </Page>

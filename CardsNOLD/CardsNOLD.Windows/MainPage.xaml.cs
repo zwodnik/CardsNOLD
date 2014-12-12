@@ -25,6 +25,16 @@ namespace CardsNOLD
         public MainPage()
         {
             this.InitializeComponent();
+
+            List<Card> card = new List<Card>();
+            card.Add(new Card() { Color = "D", Number = 5 });
+            card.Add(new Card() { Color = "W", Number = 6 });
+            card.Add(new Card() { Color = "Z", Number = 7 });
+            card.Add(new Card() { Color = "C", Number = 8 });
+
+            Player player = new Player() { Name="Zodnik", Cards = card };
+
+            CardsListView.ItemsSource = player.Cards;
         }
     }
 }
