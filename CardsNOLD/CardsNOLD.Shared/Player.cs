@@ -7,10 +7,7 @@ namespace CardsNOLD
     public class Player
     {
 
-        public Player()
-        {
-            _cards = new List<Card>();
-        }
+        public Player() { }
 
         public string Name
         {
@@ -18,13 +15,17 @@ namespace CardsNOLD
             get;
         }
 
-        private List<Card> _cards;
-
         public List<Card> Cards
         {
             set;
             get;
         }
 
+        public bool CanMove(Card top, Card current)
+        {
+            return (top.Number <= current.Number) ? true : false;
+        }
+
     }
+
 }

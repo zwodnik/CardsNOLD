@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Windows.UI.Xaml.Controls;
 
 namespace CardsNOLD
 {
@@ -13,7 +14,7 @@ namespace CardsNOLD
             get;
         }
 
-        public string Color
+        public bool Start
         {
             set;
             get;
@@ -25,12 +26,10 @@ namespace CardsNOLD
             get;
         }
 
-        public string NumberColor
+        public bool CanPut
         {
-            get
-            {
-                return Number + Color;
-            }
+            get;
+            set;
         }
 
     }
