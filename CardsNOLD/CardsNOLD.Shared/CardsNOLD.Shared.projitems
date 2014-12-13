@@ -18,4 +18,30 @@
     <Compile Include="$(MSBuildThisFileDirectory)Card.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Player.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="$(MSBuildThisFileDirectory)Assets\10c.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\10d.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\10w.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\10z.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\11c.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\11d.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\11w.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\11z.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\12c.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\12d.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\12w.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\12z.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\13c.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\13d.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\13w.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\13z.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\14c.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\14d.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\14w.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\14z.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\9c.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\9d.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\9w.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\9z.png" />
+  </ItemGroup>
 </Project>
