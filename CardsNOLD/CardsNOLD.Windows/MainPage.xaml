@@ -6,13 +6,38 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
+
 	<Page.Resources>
 		<DataTemplate x:Key="CardsListViewTemplate">
-			<StackPanel>
-				<TextBlock TextWrapping="Wrap" Text="{Binding NumberColor}"/>
-			</StackPanel>
+			<Image Source="{Binding Image}" Width="44" Height="66" />
 		</DataTemplate>
-	</Page.Resources>
+        <Style TargetType="ListView" x:Key="VerticalListView">
+            <Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
+            <Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Disabled" />
+
+            <Setter Property="ScrollViewer.HorizontalScrollMode" Value="Enabled" />
+            <Setter Property="ScrollViewer.VerticalScrollMode" Value="Disabled" />
+
+            <Setter Property="ScrollViewer.ZoomMode" Value="Disabled" />
+            <Setter Property="SelectionMode" Value="None" />
+
+            <Setter Property="ItemsPanel">
+                <Setter.Value>
+                    <ItemsPanelTemplate>
+                        <StackPanel VerticalAlignment="Top" Orientation="Horizontal" />
+                    </ItemsPanelTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Setter Property="ItemContainerStyle">
+                <Setter.Value>
+                    <Style TargetType="ListViewItem">
+                        <Setter Property="Height" Value="400" />
+                    </Style>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Page.Resources>
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
         <Grid.ColumnDefinitions>
@@ -32,8 +57,8 @@
             <Button Content="Zgarnij" />
         </StackPanel>
         
-        <StackPanel Grid.Row="2">
-        	<ListView x:Name="CardsListView" Margin="100,50" ItemTemplate="{StaticResource CardsListViewTemplate}"/>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <ListView Style="{StaticResource VerticalListView}" x:Name="CardsListView" ItemTemplate="{StaticResource CardsListViewTemplate}" Height="100" HorizontalAlignment="Center" SelectionMode="Multiple"/>
         </StackPanel>
         
     </Grid>
