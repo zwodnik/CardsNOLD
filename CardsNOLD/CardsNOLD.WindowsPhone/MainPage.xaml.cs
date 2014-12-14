@@ -28,7 +28,7 @@ namespace CardsNOLD
             
             this.NavigationCacheMode = NavigationCacheMode.Required;
         }
-
+        //siemka
         /// <summary>
         /// Invoked when this page is about to be displayed in a Frame.
         /// </summary>
