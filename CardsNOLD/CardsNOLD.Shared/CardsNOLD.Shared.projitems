@@ -43,5 +43,9 @@
     <Content Include="$(MSBuildThisFileDirectory)Assets\9d.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\9w.png" />
     <Content Include="$(MSBuildThisFileDirectory)Assets\9z.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\logomale.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\menu.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\nazwa.png" />
+    <Content Include="$(MSBuildThisFileDirectory)Assets\stos.png" />
   </ItemGroup>
 </Project>

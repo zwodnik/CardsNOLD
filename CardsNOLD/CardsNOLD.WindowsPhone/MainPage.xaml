@@ -7,8 +7,54 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+	<Page.Resources>
+<Style TargetType="ListView" x:Key="VerticalListView">
+<Setter Property="ScrollViewer.HorizontalScrollBarVisibility" Value="Auto" />
+<Setter Property="ScrollViewer.VerticalScrollBarVisibility" Value="Disabled" />
 
+<Setter Property="ScrollViewer.HorizontalScrollMode" Value="Enabled" />
+<Setter Property="ScrollViewer.VerticalScrollMode" Value="Disabled" />
+
+<Setter Property="ScrollViewer.ZoomMode" Value="Disabled" />
+<Setter Property="SelectionMode" Value="None" />
+
+<Setter Property="ItemsPanel">
+<Setter.Value>
+<ItemsPanelTemplate>
+<StackPanel VerticalAlignment="Top" Orientation="Horizontal" />
+</ItemsPanelTemplate>
+</Setter.Value>
+</Setter>
+
+<Setter Property="ItemContainerStyle">
+<Setter.Value>
+<Style TargetType="ListViewItem">
+<Setter Property="Height" Value="400" />
+</Style>
+</Setter.Value>
+</Setter>
+</Style>
+<DataTemplate x:Key="CardsListVievTemplate">
+	<Grid/>
+</DataTemplate>
+</Page.Resources>
     <Grid>
+    	<StackPanel VerticalAlignment="Bottom" Margin="0,0,0,10" Height="130">
+    		<ListView Height="100" Style="{StaticResource VerticalListView}" ItemTemplate="{StaticResource CardsListVievTemplate}" Margin="0,0,10,0"/>
+    	</StackPanel>
+    	<StackPanel Margin="0,0,10,100" HorizontalAlignment="Right" Width="150" Height="150">
+    		<Button Content="podaj karte/ty" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+    		<Button Content="zbierz karty" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,20,0,0"/>
+    	</StackPanel>
+    	<Grid HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="400" Margin="10,10,0,0">
+    		<TextBlock TextWrapping="Wrap" Text="TextBlock" Width="100" Height="29" Margin="152,161,148,10"/>
+    		<Image Height="66" Width="44" Margin="0,0,100,0" Source="Assets/stos.png"/>
+    		<Image Height="66" Width="44" Margin="0,0,60,0" Source="Assets/10c.png"/>
+    		<Image Height="66" Width="44" Margin="0,0,0,0" Source="Assets/10z.png"/>
+    		<Image Height="66" Width="44" Margin="0,0,-60,0" Source="Assets/11d.png"/>
+    		<Image Height="66" Width="44" Margin="0,0,-120,0" Source="Assets/14c.png"/>
+    	</Grid>
+    	<TextBlock HorizontalAlignment="Left" Height="1" Margin="57,19,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="1"/>
 
     </Grid>
 </Page>
